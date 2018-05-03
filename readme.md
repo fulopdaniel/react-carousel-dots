@@ -1,6 +1,6 @@
 ﻿This component provides a pagination method with dots for any amount of images/slides.
 
-![Demo](https://i.imgur.com/TVIRA8z.gif)
+<img src="https://i.imgur.com/TVIRA8z.gif" width="500" />
 
 # Quickstart
 
