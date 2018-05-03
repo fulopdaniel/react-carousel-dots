@@ -1,6 +1,6 @@
 {
   "name": "react-carousel-dots",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "This component provides a pagination method with dots for any amount of images/slides.",
   "keywords": [
     "react",
