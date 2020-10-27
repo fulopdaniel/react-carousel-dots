@@ -12,7 +12,7 @@ class ReactCarouselDots extends React.Component {
     visible: PropTypes.number,
     className: PropTypes.string,
     onClick: PropTypes.func,
-    style: PropTypes.object,
+    dotStyle: PropTypes.object,
     activeStyle: PropTypes.object,
   }
   static defaultProps = {
@@ -21,7 +21,7 @@ class ReactCarouselDots extends React.Component {
     visible: 5,
     className: '',
     onClick: null,
-    style: null,
+    dotStyle: null,
     activeStyle: null,
   }
   constructor(props) {
@@ -189,10 +189,6 @@ class ReactCarouselDots extends React.Component {
       width: this.props.size,
       marginRight: this.props.margin,
       marginLeft: this.props.margin,
-      ...this.props.style,
-      ...(isActive && {
-        ...this.props.activeStyle
-      }),
     };
     if (this.state.direction === 'forwards') {
       if (this.props.active < (this.props.visible - 2)) {
@@ -282,7 +278,7 @@ class ReactCarouselDots extends React.Component {
       dots.push((
         <div
           key={i}
-          style={this.getDotStyle(this.props.active === i)}
+          style={this.getDotStyle()}
           className="dot-holder"
           onClick={() => this.props.onClick(i)}
         >
@@ -291,6 +287,12 @@ class ReactCarouselDots extends React.Component {
             className={`react-carousel-dots-dot
                       ${this.getDotClassName(i)}
                       ${this.props.active === i ? 'active' : ''}`}
+            style={{
+              ...this.props.dotStyle,
+              ...(this.props.active === i && {
+                ...this.props.activeStyle
+              }),
+            }}
           />
         </div>
       ));
