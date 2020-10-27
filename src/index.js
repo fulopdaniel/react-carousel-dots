@@ -11,12 +11,18 @@ class ReactCarouselDots extends React.Component {
     margin: PropTypes.number,
     visible: PropTypes.number,
     className: PropTypes.string,
+    onClick: PropTypes.func,
+    dotStyle: PropTypes.object,
+    activeStyle: PropTypes.object,
   }
   static defaultProps = {
     size: 16,
     margin: 1,
     visible: 5,
     className: '',
+    onClick: null,
+    dotStyle: null,
+    activeStyle: null,
   }
   constructor(props) {
     super(props);
@@ -274,12 +280,22 @@ class ReactCarouselDots extends React.Component {
           key={i}
           style={this.getDotStyle()}
           className="dot-holder"
+          onClick={() => this.props.onClick(i)}
+          className="dot-holder"
+          onKeyPress={() => this.props.onClick(i)}
+          tabIndex={0}
         >
           <div
             key={`${i}-inner`}
             className={`react-carousel-dots-dot
                       ${this.getDotClassName(i)}
                       ${this.props.active === i ? 'active' : ''}`}
+            style={{
+              ...this.props.dotStyle,
+              ...(this.props.active === i && {
+                ...this.props.activeStyle
+              }),
+            }}
           />
         </div>
       ));
