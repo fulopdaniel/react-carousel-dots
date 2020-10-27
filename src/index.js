@@ -281,6 +281,9 @@ class ReactCarouselDots extends React.Component {
           style={this.getDotStyle()}
           className="dot-holder"
           onClick={() => this.props.onClick(i)}
+          className="dot-holder"
+          onKeyPress={() => this.props.onClick(i)}
+          tabIndex={0}
         >
           <div
             key={`${i}-inner`}
