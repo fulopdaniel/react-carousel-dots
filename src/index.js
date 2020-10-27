@@ -183,7 +183,7 @@ class ReactCarouselDots extends React.Component {
     return newBigDots;
   }
 
-  getDotStyle = (isActive) => {
+  getDotStyle = () => {
     let style = {
       height: this.props.size,
       width: this.props.size,
