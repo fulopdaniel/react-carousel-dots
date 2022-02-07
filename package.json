@@ -1,6 +1,6 @@
 {
-  "name": "react-carousel-dots",
-  "version": "0.1.0",
+  "name": "@caazam/react-carousel-dots",
+  "version": "0.1.1",
   "description": "This component provides a pagination method with dots for any amount of images/slides.",
   "keywords": [
     "react",
@@ -11,34 +11,22 @@
     "carousel"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/fulopdaniel/react-carousel-dots",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/fulopdaniel/react-carousel-dots.git"
-  },
+  "homepage": "https://github.com/caazam/react-carousel-dots",
   "main": "build/index.js",
   "peerDependencies": {
-    "react": "^16.2.0"
+    "react": "^16.13.1"
   },
-  "dependencies": {
-    "react": "^16.2.0",
-    "webpack": "^2.6.1",
-    "prop-types": "^15.6.1"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack"
   },
-  "author": {
-    "name": "Fülöp Dániel",
-    "email": "fulop.dani96@gmail.com"
-  },
+  "author": "Fülöp Dániel <fulop.dani96@gmail.com>",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
-    "babel-loader": "^6.4.1",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
@@ -50,6 +38,11 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "style-loader": "^0.21.0"
+    "style-loader": "^0.21.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
